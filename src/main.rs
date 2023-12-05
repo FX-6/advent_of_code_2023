@@ -1,6 +1,7 @@
 use clap::Parser;
 
 mod day1;
+mod day2;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -20,6 +21,8 @@ fn main() {
     match (args.day, args.part) {
         (1, 1) => println!("Answer: {}", day1::part1(get_input(1))),
         (1, 2) => println!("Answer: {}", day1::part2(get_input(1))),
+        (2, 1) => println!("Answer: {}", day2::part1(get_input(2))),
+        (2, 2) => println!("Answer: {}", day2::part2(get_input(2))),
         (_, _) => println!("Not implemented yet"),
     }
 }
